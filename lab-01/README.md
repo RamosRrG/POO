@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistema de Controle de Versão
 
 ## Configuração inicial para uso do GIT
@@ -25,3 +26,6 @@ git config --global user.email "email"
 
 - Rebase
     O rebare atua juntando as branchs e não cria um commit
+=======
+Sistema de Controle de Versão
+>>>>>>> parent of 992a59a (Atividade 7 do lab1)
