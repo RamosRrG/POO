@@ -2,9 +2,13 @@
 
 ## Configuração inicial para uso do GIT
 - Configuração de nome de usuário e e-mail no Git
-    - git config --global user.name "Name"
-    - git config --global user.email "email"
+    - user.name é configurado para que o git saiba o nome do responsável a quem atribuir o commit
+    - user.email é configurado para que o git link o nome do responsável pelo commit a sua conta do github
 
+```
+git config --global user.name "Name"
+git config --global user.email "email"
+```
 - Criando Personal Access Token (PAT) no GitHub
     1. Acesse o github e va em configurações
     2. Developer settings
