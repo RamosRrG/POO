@@ -43,9 +43,13 @@ public class Caneta {
         if (aberta_fechada) {
             double distancia = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
             double gastado = distancia * 0.01;
-            this.nivelTinta = nivelTinta - gastado;
-            String desenhei = String.format("Desenhei %.2f cm na cor %s", distancia, cor);
-            return desenhei;
+            if(nivelTinta>=gastado) {
+                this.nivelTinta = nivelTinta - gastado;
+                String desenhei = String.format("Desenhei %.2f cm na cor %s", distancia, cor);
+                return desenhei;
+            }else {
+                return "Sem tinta men";
+            }
         } else {
             return "A caneta esta fechada, abra ela";
         }
