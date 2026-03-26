@@ -52,17 +52,17 @@ public class Horario {
     }
 //TODO---------------------------------------
 
-//TODO SET
+//TODO SET ant GET
     public boolean setHoras(int hora) {
         if(hora<=23 && hora>=0){
-            this.horas = horas;
+            this.horas = hora;
             return true;
         }else{
             return false;
         }
     }
     public boolean setMinutos(int minuto) {
-        if(minutos<=59 && minuto>=0){
+        if(minuto<=59 && minuto>=0){
             this.minutos = minuto;
             return true;
         }else{
@@ -70,24 +70,89 @@ public class Horario {
         }
     }
 
-public boolean setSegundos(int segundo) {
-    if (segundo <= 59 && segundo >= 0) {
-        this.segundos = segundo;
-        return true;
-    } else {
-        return false;
+
+
+    public boolean setSegundos(int segundo) {
+        if (segundo <= 59 && segundo >= 0) {
+            this.segundos = segundo;
+            return true;
+        } else {
+            return false;
+        }
     }
-}
+
+        public int getHoras() {
+            return horas;
+        }
+
+        public int getMinutos() {
+            return minutos;
+        }
+
+        public int getSegundos() {
+            return segundos;
+        }
+
+
+
+
 //TODO -------------------------------------
+
+
+//TODO toString
     @Override
     public String toString() {
-        return String.valueOf( horas+':' + minutos + ':' + segundos);
+        return String.format( "%02d:%02d:%02d", horas, minutos, segundos);
+    }
+//TODO Converte segundos
+    public long totalSegundos(){
+        long segundo = (this.horas*3600)+(this.minutos*60)+this.segundos;
+        return segundo;
     }
 
-    public int totalSegundos(Horario h){
-        h.get
+//TODO Diferença de horario
+    public long diferencaHorario(Horario diferente){
+    return Math.abs(this.totalSegundos() - diferente.totalSegundos());
+}
+//TODO metodo auxiliar e metodo por extenso
+
+    public String porExtensoAuxiliar(int valor){
+        return switch (valor){
+            case 1 -> "um";
+            case 2 -> "um";
+            case 3 -> "um";
+            case 4 -> "um";
+            case 5 -> "um";
+            case 6 -> "um";
+            case 7 -> "um";
+            case 8 -> "um";
+            case 9 -> "um";
+            case 10 -> "um";
+            case 11 -> "um";
+            case 12 -> "um";
+            case 13 -> "um";
+            case 14 -> "um";
+            case 15 -> "um";
+            case 16 -> "um";
+            case 17 -> "um";
+            case 18 -> "um";
+            case 19 -> "um";
+            case 20 -> "um";
+
+
+
+        }
+
+
+
+
     }
+
+
+
+
 
 
 }
+
 
