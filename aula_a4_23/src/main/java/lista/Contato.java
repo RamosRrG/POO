@@ -32,8 +32,11 @@ public class Contato {
     public boolean updateEmail(String rotulo, String email){
         return this.emails.updateEmail(rotulo, email);
     }
-    
 
-
-
+    @java.lang.Override
+    public java.lang.String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Nome: " + nome + sobrenome + "/n" + "Data de Nascimento: " + dataNasc + "/n" + "Telefones" + telefones.toString() + "/n" + emails.toString());
+        return sb.toString();
+    }
 }
