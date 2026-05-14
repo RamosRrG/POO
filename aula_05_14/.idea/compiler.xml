@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="aula_05_14a" target="25" />
+      <module name="aula_05_14a.main" target="25" />
+      <module name="aula_05_14a.test" target="25" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
