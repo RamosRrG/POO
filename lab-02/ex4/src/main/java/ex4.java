@@ -21,7 +21,7 @@ public class ex4{
                     matriz[tamanho][tamanho2] = "*";
                 }
 
-            
+
         }
         for (int i = 0; i < matriz.length; i++) {
             System.out.println();
