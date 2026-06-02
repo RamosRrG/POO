@@ -1,0 +1,37 @@
+import edu.princeton.cs.algs4.Draw;
+import edu.princeton.cs.algs4.DrawListener;
+
+public class App implements DrawListener {
+
+        private Draw draw;
+
+        public App(){
+                this.draw = new Draw();
+                this.draw.setTitle("JOgo de cartas");
+                this.draw.setCanvasSize(1200,600);
+                this.draw.setXscale(0,1200);
+                this.draw.setYscale(1200,0);
+                this.draw.setDefaultCloseOperation(3);
+                this.draw.enableDoubleBuffering();
+                this.draw.addListener(this);
+
+
+
+        }
+
+        @Override
+        public void mouseClicked(double x, double y) {
+                this.draw.picture(x,y,"cartas/1p.png");
+                this.draw.show();
+        }
+
+        public static void main(String[] args){
+                App app = new App();
+
+
+
+
+
+
+    }
+}
