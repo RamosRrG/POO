@@ -1,3 +1,5 @@
+package ads.poo;
+
 public class Carta {
     protected Naipe naipe;
     protected Valor valor;

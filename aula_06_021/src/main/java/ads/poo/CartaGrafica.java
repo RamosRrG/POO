@@ -1,15 +1,23 @@
+package ads.poo;
+
 import edu.princeton.cs.algs4.Draw;
 
-public class CartaGrafica extends Carta{
+public class CartaGrafica extends Carta implements Gui {
     public final String fundo = "cartas/fundoa.png";
-    public boolean frente = true;
+    public boolean frente;
     public double x;
     public double y;
-    public CartaGrafica(Naipe naipe, Valor valor,int x, int y) {
+
+    public CartaGrafica(Naipe naipe, Valor valor, int x, int y) {
         super(naipe, valor);
         this.x = x;
         this.y = y;
     }
+
+    public void clicar() {
+        this.frente = !frente;
+    }
+
 
     public void desenhar(Draw draw) {
         if (frente) {
@@ -21,13 +29,15 @@ public class CartaGrafica extends Carta{
         }
     }
 
-    public boolean clicouDentro(double x,double y){
-        if(x+36 <= this.x+72 && y+48<= this.y+72){
-            frente = false;
-            return false;
-        }else{
-            frente = true;
+    public boolean clicouDentro(double x, double y) {
+        if (x <= (this.x + 36) && x >= (this.x - 36) && y <= (this.y + 48) && y >= (this.y - 48)) {
+            this.clicar();
             return true;
+        } else {
+            return false;
+
         }
     }
 }
+
+

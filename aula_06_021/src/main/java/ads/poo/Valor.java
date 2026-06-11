@@ -1,3 +1,5 @@
+package ads.poo;
+
 public enum Valor {
     AS(1,"As","1"),
     DOIS(2,"Dois","2"),

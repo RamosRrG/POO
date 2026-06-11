@@ -1,3 +1,5 @@
+package ads.poo;
+
 public enum Naipe {
     OUROS(1,"Ouros","o"),
     ESPADAS(2,"Espadas","e"),
@@ -14,4 +16,4 @@ public enum Naipe {
         this.inicial = inicial;
     }
 
-    }
+}
